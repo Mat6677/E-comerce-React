@@ -1,0 +1,43 @@
+header nav li{
+    position: relative;
+}
+header nav li a,p{
+    padding: 5px 12px;
+}
+
+header nav li a{
+    border-radius: 2.5px;
+    transition: all 100ms ease-in-out;
+}
+header nav li a:hover{
+    background-color: #ffffff;
+    color: #121617;
+}
+header nav li p{
+    border-top-left-radius: 2.5px;
+    border-top-right-radius: 2.5px;
+    transition: all 100ms ease-in-out;
+}
+
+header nav li div{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 300%;
+    height: fit-content;
+    color: #121617;
+    background-color: #ffffff;
+    z-index: 10;
+    padding: 10px;
+    border-top-right-radius: 2.5px;
+    border-bottom-left-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+}
+header div.active {
+    clip-path: circle(142% at 0% 0%);
+    transition: all 250ms ease-in-out;
+}
+header div.inactive {
+    clip-path: circle(0% at 0% 0%);
+    transition: all 250ms ease-in-out;
+}
