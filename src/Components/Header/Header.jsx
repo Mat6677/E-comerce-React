@@ -11,7 +11,7 @@ export const Header = () => {
       <figure className="flex-1 ">
         <img
           className="max-w-[125px]"
-          src="/ShopSmartly-logo-white.png"
+          src="public/ShopSmartly-logo-white.png"
           alt=""
         />
       </figure>
