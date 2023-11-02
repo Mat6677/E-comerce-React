@@ -1,4 +1,5 @@
 import "./Header.css";
+import logo from './ShopSmartly-logo-white.png'
 import { useState } from "react";
 import { CartIcon } from "../Icons/CartIcon";
 
@@ -11,7 +12,7 @@ export const Header = () => {
       <figure className="flex-1 ">
         <img
           className="max-w-[125px]"
-          src="public/ShopSmartly-logo-white.png"
+          src={logo}
           alt=""
         />
       </figure>
