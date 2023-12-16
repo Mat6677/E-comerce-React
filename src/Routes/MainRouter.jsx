@@ -11,7 +11,7 @@ export const MainRouter = () => {
       <Routes>
         <Route path="/E-comerce-React" element={<Home />} />
         <Route path="/E-comerce-React/category/:categoryId" element={<Category />} />
-        <Route path="/E-comerce-React/item/:id" element={<Item />} />
+        <Route path="/E-comerce-React/item/:itemId" element={<Item />} />
       </Routes>
     </Router>
   );

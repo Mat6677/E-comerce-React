@@ -1,0 +1,16 @@
+.cart-container {
+  height: 90svh;
+  width: 25svw;
+  top: 50%;
+  left: 100%;
+  translate: 0% -50%;
+  transition: all 250ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 0 50px 0;
+}
+.cart-container.active {
+  left: 70%;
+  transition: all 250ms ease-in-out;
+}

@@ -1,20 +1,13 @@
 import "./Header.css";
 import logo from "./ShopSmartly-logo-white.png";
-import { useState, useEffect } from "react";
-import { CartIcon } from "../Icons/CartIcon";
-import axios from "axios";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCollection } from "../../hooks/useCollection";
+import { Cart } from "../CartContainer/Cart";
 
 export const Header = () => {
   const [categoriasModal, setCategoriasModal] = useState(false);
-  const [categorias, setCategorias] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("https://dummyjson.com/products/categories")
-      .then((res) => setCategorias(res.data))
-      .catch((error) => console.log(error));
-  }, []);
+  const { categ } = useCollection("products");
 
   return (
     <header className="flex justify-between items-center px-10">
@@ -42,9 +35,11 @@ export const Header = () => {
               className={categoriasModal ? "active" : "inactive"}
             >
               <ul className="flex flex-col gap-2">
-                {categorias.map((categoria) => (
+                {Array.from(new Set(categ)).map((categoria) => (
                   <li key={categoria}>
-                    <Link to={`/E-comerce-React/category/${categoria}`}>{categoria}</Link>
+                    <Link to={`/E-comerce-React/category/${categoria}`}>
+                      {categoria}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -58,9 +53,7 @@ export const Header = () => {
             <a href="">Ayuda</a>
           </li>
           <li>
-            <button>
-              <CartIcon />
-            </button>
+            <Cart />
           </li>
         </ul>
       </nav>

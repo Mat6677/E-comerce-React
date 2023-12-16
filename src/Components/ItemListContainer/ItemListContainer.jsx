@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./ItemListContainer.css";
 
 export const ItemListContainer = ({ products }) => {
+  console.log(products)
   return (
     <div className="product-container">
       {products.map((product) => (
